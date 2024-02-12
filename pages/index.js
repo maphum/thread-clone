@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import styles from "./index.module.css";
 
-const Content: NextPage = () => {
+const Content = () => {
   return (
     <div className={styles.content}>
       <main className={styles.feed}>
@@ -144,7 +143,7 @@ const Content: NextPage = () => {
                       <img
                         className={styles.vectorIcon1}
                         alt=""
-                        src="/vector.svg"
+                        src="/vector1.svg"
                       />
                     </button>
                     <img className={styles.sendIcon} alt="" src="/send.svg" />
@@ -161,7 +160,7 @@ const Content: NextPage = () => {
                   <img
                     className={styles.avatarIcon2}
                     alt=""
-                    src="/avatar@2x.png"
+                    src="/avatar2@2x.png"
                   />
                 </div>
                 <div className={styles.infosActions}>
@@ -201,14 +200,14 @@ const Content: NextPage = () => {
                       <img
                         className={styles.vectorIcon1}
                         alt=""
-                        src="/vector.svg"
+                        src="/vector1.svg"
                       />
                     </button>
                     <button className={styles.paperclip}>
                       <img
                         className={styles.shareIcon1}
                         alt=""
-                        src="/share-icon.svg"
+                        src="/share-icon1.svg"
                       />
                     </button>
                   </div>
@@ -252,7 +251,7 @@ const Content: NextPage = () => {
                     <img
                       className={styles.sendIcon}
                       alt=""
-                      src="/comment.svg"
+                      src="/comment1.svg"
                     />
                     <img className={styles.sendIcon} alt="" src="/repost.svg" />
                     <img className={styles.sendIcon} alt="" src="/send.svg" />
@@ -269,7 +268,7 @@ const Content: NextPage = () => {
                   <img
                     className={styles.avatarIcon2}
                     alt=""
-                    src="/avatar@2x.png"
+                    src="/avatar2@2x.png"
                   />
                 </div>
                 <div className={styles.infosActions}>
@@ -311,14 +310,14 @@ const Content: NextPage = () => {
                       <img
                         className={styles.vectorIcon1}
                         alt=""
-                        src="/vector.svg"
+                        src="/vector1.svg"
                       />
                     </button>
                     <button className={styles.paperclip}>
                       <img
                         className={styles.shareIcon1}
                         alt=""
-                        src="/share-icon.svg"
+                        src="/share-icon1.svg"
                       />
                     </button>
                   </div>
