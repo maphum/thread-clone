@@ -329,9 +329,9 @@ const Content = () => {
             </div>
           </div>
           <div className={styles.infos6}>
-            <div className={styles.infos5}>
+            <div className={styles.infos7}>
               <div className={styles.headingInfos}>
-                <h2 className={styles.namLe}>Trending Topics</h2>
+                <h2 className={styles.trendingTopics}>Trending Topics</h2>
                 <img
                   className={styles.settingsIcon}
                   alt=""

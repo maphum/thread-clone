@@ -462,12 +462,34 @@
   justify-content: flex-start;
   font-size: var(--font-size-sm);
 }
+.trendingTopics {
+  margin: 0;
+  height: 19px;
+  position: relative;
+  font-size: inherit;
+  line-height: 19px;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .settingsIcon {
   width: 20px;
   position: relative;
   height: 20px;
   overflow: hidden;
   flex-shrink: 0;
+}
+.infos7 {
+  align-self: stretch;
+  height: 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  mix-blend-mode: normal;
 }
 .design,
 .threadsdesktop {
