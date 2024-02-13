@@ -1,6 +1,24 @@
 import styles from "./thread-input.module.css";
+import { useState } from "react";
+const ThreadInput = ({ getThreads }) => {
 
-const ThreadInput = () => {
+  const [input, setInput] = useState("");
+
+  const postThread = async () => {
+    try {
+      const request = await fetch("/api/threads", {
+        method: "POST",
+        body: JSON.stringify({ content: input, user: "Nam Le" }),
+      });
+      const data = await request.json();
+      getThreads();
+      setInput("");
+      console.log("thread-input.js 12 | data", data);
+    } catch (error) {
+      console.log("thread-input.js 14 | error", error.message);
+    }
+  };
+
   return (
     <div className={styles.threadinput}>
       <div className={styles.thread}>
@@ -12,6 +30,7 @@ const ThreadInput = () => {
             className={styles.shareSomethingCool}
             placeholder="Share something cool today"
             type="text"
+            onChange={(e) => setInput(e.target.value)}
           />
         </div>
         <div className={styles.actions}>
@@ -20,7 +39,7 @@ const ThreadInput = () => {
               <img className={styles.vectorIcon} alt="" src="/vector.svg" />
             </button>
           </div>
-          <button className={styles.actions2}>
+          <button className={styles.actions2} onClick={postThread}>
             <img className={styles.sendIcon} alt="" src="/send.svg" />
           </button>
         </div>

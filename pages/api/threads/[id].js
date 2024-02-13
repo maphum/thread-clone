@@ -26,8 +26,7 @@ export default async function handler(req, res) {
 
     case "PUT":
       try {
-        const body = req.body;
-        console.log(body)
+        const body = JSON.parse(req.body);
         if (body.type === "addLike") {
           const thread = Thread.findByIdAndUpdate(body.id, {
             $inc: { likes: 1 },

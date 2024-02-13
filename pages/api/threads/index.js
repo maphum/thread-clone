@@ -21,7 +21,7 @@ export default async function handler(req, res) {
     case "POST":
       try {
         console.log("threads 23 | got to post", req.body);
-        const thread = await Thread.create(req.body);
+        const thread = await Thread.create(JSON.parse(req.body));
         res.status(201).json({ success: true, data: thread });
       } catch (error) {
         console.log("threads 26 | error", error.message);
