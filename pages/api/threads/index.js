@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     case "GET":
       try {
         console.log("threads 13 | got to get");
-        const threads = await Thread.find({});
+        const threads = await Thread.find({}).sort({ timestamp: -1 });
         res.status(200).json({ success: true, data: threads });
       } catch (error) {
         console.log(error);
