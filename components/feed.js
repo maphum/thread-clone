@@ -10,10 +10,8 @@ const Feed = () => {
     try {
       const request = await fetch("/api/threads");
       const data = await request.json();
-      console.log("feed.js 11 | data", data);
       setThreads(data);
     } catch (error) {
-      console.log("feed.js 12 | error getting threads", error);
     }
   };
 

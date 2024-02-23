@@ -31,7 +31,7 @@ export default async function handler(req, res) {
           const thread = Thread.findByIdAndUpdate(body.id, {
             $inc: { likes: 1 },
           }).catch((err) => {
-            console.log("[id].js 36 | error updating", err);
+            console.log("error updating", err);
           });
           return res.status(200).json({ success: true, thread });
         } else {
@@ -46,13 +46,13 @@ export default async function handler(req, res) {
           res.status(200).json({ success: true, data: thread });
         }
       } catch (error) {
-        console.log("[id].js 50 | error", error.message);
+        console.log("error", error.message);
         res.status(400).json({ success: false });
       }
       break;
 
     case "DELETE":
-      console.log("[id].js 58 | deleting with id", id);
+      console.log("deleting with id", id);
       try {
         const deletedThread = await Thread.deleteOne({ _id: id });
 

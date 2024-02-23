@@ -11,7 +11,6 @@ const Thread = ({
 }) => {
 
   const addLike = async () => {
-    console.log("thread.js 10 | adding like");
     try {
       const request = await fetch(`/api/threads/${id}`, {
         method: "PUT",
@@ -19,9 +18,7 @@ const Thread = ({
       });
       const data = await request.json();
       getThreads();
-      console.log("thread.js 15 | data", data);
     } catch (error) {
-      console.log("thread.js 17 | error", error);
     }
   };
 
@@ -32,9 +29,7 @@ const Thread = ({
       });
       const data = await request.json();
       getThreads();
-      console.log("thread.js 31 | data", data);
     } catch (error) {
-      console.log("thread.js 31 | error deleting", error.message);
     }
   };
 

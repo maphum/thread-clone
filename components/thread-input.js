@@ -12,10 +12,7 @@ const ThreadInput = ({ getThreads }) => {
       });
       const data = await request.json();
       getThreads();
-      setInput("");
-      console.log("thread-input.js 12 | data", data);
     } catch (error) {
-      console.log("thread-input.js 14 | error", error.message);
     }
   };
 
@@ -31,6 +28,10 @@ const ThreadInput = ({ getThreads }) => {
             placeholder="Share something cool today"
             type="text"
             onChange={(e) => setInput(e.target.value)}
+            onKeyDown={async (e) => {
+              if (e.key == "Enter") await postThread();
+              setInput("")
+            }}
           />
         </div>
         <div className={styles.actions}>
@@ -39,7 +40,7 @@ const ThreadInput = ({ getThreads }) => {
               <img className={styles.vectorIcon} alt="" src="/vector.svg" />
             </button>
           </div>
-          <button className={styles.actions2} onClick={postThread}>
+          <button className={styles.actions2} onClick={() => postThread()}>
             <img className={styles.sendIcon} alt="" src="/send.svg" />
           </button>
         </div>
