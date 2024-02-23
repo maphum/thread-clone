@@ -7,6 +7,12 @@ function MyApp({ Component, pageProps }) {
     <Fragment>
       <Head>
         <title>Threads Clone</title>
+        <link
+          rel="icon"
+          href="/thread.png"
+          type="image/png"
+          sizes="32x32"
+        />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
